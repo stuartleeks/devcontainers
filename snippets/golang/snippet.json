@@ -7,7 +7,7 @@
         },
         {
             "type": "copyAndRun",
-            "source": "../tools-install/golang.sh"
+            "source": "golang.sh"
         },
         {
             "type": "dockerfileSnippet",

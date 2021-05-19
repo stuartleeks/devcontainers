@@ -1,8 +1,9 @@
 {
-	"runArgs": [
-		// Mount go mod cache
-		"-v", "__DEVCONTAINER_NAME__-gomodcache:/go/pkg",
-	],
+	// TODO - add go pkg cache - need to resolve permission issues on the mounted volume
+	// "mounts": [
+	// 	// Mount go mod cache
+	// 	"source=__DEVCONTAINER_NAME__-gomodcache,target=/go/pkg",
+	// ],
 	"settings": { 
 		"go.gopath": "/go",
 		"go.useLanguageServer": true,
@@ -23,6 +24,6 @@
 	
 	"extensions": [
 		"golang.go",
-		"stuartleeks.vscode-go-by-example"
+		"stuartleeks.vscode-go-by-example",
 	]
 }

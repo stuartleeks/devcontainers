@@ -3,9 +3,10 @@
 {
 	"name": "devcontainer-cli",
 	"dockerFile": "Dockerfile",
-	"runArgs": [
+
+	"mounts": [
 		// Keep command history 
-		"-v", "__DEVCONTAINER_NAME__-bashhistory:/root/commandhistory",
+		"source=__DEVCONTAINER_NAME__-bashhistory,target=/home/vscode/commandhistory"
 	],
 
 	// Set *default* container specific settings.json values on container create.
