@@ -21,14 +21,14 @@ ARG USER_GID=$USER_UID
 USER $USERNAME
 RUN \
     mkdir -p ~/.local/bin \
-    && echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc
+    && echo "export PATH=\$PATH:~/.local/bin" >> ~/.bashrc
 
 # Configure apt, install packages and general tools
 RUN sudo apt-get update \
     && sudo apt-get -y install --no-install-recommends apt-utils dialog nano bash-completion sudo bsdmainutils \
     #
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
-    && sudo apt-get -y install git iproute2 procps lsb-release figlet
+    && sudo apt-get -y install git iproute2 procps lsb-release figlet build-essential
 
 # Save command line history
 RUN echo "export HISTFILE=/home/$USERNAME/commandhistory/.bash_history" >> "/home/$USERNAME/.bashrc" \
@@ -36,6 +36,9 @@ RUN echo "export HISTFILE=/home/$USERNAME/commandhistory/.bash_history" >> "/hom
     && mkdir -p /home/$USERNAME/commandhistory \
     && touch /home/$USERNAME/commandhistory/.bash_history \
     && chown -R $USERNAME /home/$USERNAME/commandhistory
+
+# Set env for tracking that we're running in a devcontainer
+ENV DEVCONTAINER=true
 
 # __DEVCONTAINER_SNIPPET_INSERT__ (control where snippets get inserted using the devcontainer CLI)
 

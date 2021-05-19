@@ -1,0 +1,17 @@
+{
+    "actions": [
+        {
+            "type": "mergeJSON",
+            "source": "devcontainer.json",
+            "target": ".devcontainer/devcontainer.json"
+        },
+        {
+            "type": "copyAndRun",
+            "source": "docker-client.sh"
+        },
+        {
+            "type": "dockerfileSnippet",
+            "content": "#Add user to docker group\nRUN sudo groupadd docker && sudo usermod -aG docker $USERNAME && newgrp docker"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+	"mounts": [
+		// Mounts the .azure host folder into the dev container to pick up host az CLI login details
+		"type=bind,source=${env:HOME}${env:USERPROFILE}/.azure,target=__DEVCONTAINER_HOME__/.azure",
+	],
+}

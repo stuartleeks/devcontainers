@@ -1,0 +1,28 @@
+{
+	"runArgs": [
+		// Mount go mod cache
+		"-v", "__DEVCONTAINER_NAME__-gomodcache:/go/pkg",
+	],
+	"settings": { 
+		"go.gopath": "/go",
+		"go.useLanguageServer": true,
+		"[go]": {
+			"editor.snippetSuggestions": "none",
+			"editor.formatOnSave": true,
+			"editor.codeActionsOnSave": {
+				"source.organizeImports": true
+			}
+		},
+		"gopls": {
+			"usePlaceholders": true, // add parameter placeholders when completing a function
+			// Experimental settings
+			"completeUnimported": true, // autocomplete unimported packages
+			"deepCompletion": true // enable deep completion
+		}
+	},
+	
+	"extensions": [
+		"golang.go",
+		"stuartleeks.vscode-go-by-example"
+	]
+}

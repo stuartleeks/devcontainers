@@ -1,0 +1,13 @@
+{
+    "actions": [
+        {
+            "type": "mergeJSON",
+            "source": "devcontainer.json",
+            "target": ".devcontainer/devcontainer.json"
+        },
+        {
+            "type": "copyAndRun",
+            "source": "../tools-install/azure-cli.sh"
+        }
+    ]
+}
