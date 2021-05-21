@@ -6,13 +6,13 @@
 
 	"mounts": [
 		// Keep command history 
-		"source=__DEVCONTAINER_NAME__-bashhistory,target=/home/vscode/commandhistory"
+		"source=__DEVCONTAINER_NAME__-bashhistory,target=/home/vscode/commandhistory",
 	],
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"files.eol": "\n"
+		"files.eol": "\n",
 	},
 	
 	// Add the IDs of extensions you want installed when the container is created.
@@ -24,5 +24,5 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "echo hello",
 
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
 }
