@@ -7,11 +7,11 @@
         },
         {
             "type": "copyAndRun",
-            "source": "golang.sh"
+            "source": "../tools-install/golang.sh"
         },
         {
             "type": "dockerfileSnippet",
-            "content": "# Add go to PATH\nENV PATH /usr/local/go/bin:$PATH"
+            "contentPath": "Dockerfile"
         }
     ]
 }

@@ -5,7 +5,6 @@
 	// 	"source=__DEVCONTAINER_NAME__-gomodcache,target=/go/pkg",
 	// ],
 	"settings": { 
-		"go.gopath": "/go",
 		"go.useLanguageServer": true,
 		"[go]": {
 			"editor.snippetSuggestions": "none",
@@ -19,6 +18,18 @@
 			// Experimental settings
 			"completeUnimported": true, // autocomplete unimported packages
 			"deepCompletion": true // enable deep completion
+		},
+		"go.delveConfig": {
+			"dlvLoadConfig": {
+				"followPointers": true,
+				"maxVariableRecurse": 1,
+				"maxStringLen": 1024,
+				"maxArrayValues": 64,
+				"maxStructFields": -1
+			},
+			"apiVersion": 2,
+			"showGlobalVariables": false,
+			"debugAdapter": "legacy"
 		}
 	},
 	
