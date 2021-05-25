@@ -7,7 +7,7 @@
         },
         {
             "type": "copyAndRun",
-            "source": "docker-client.sh"
+            "source": "../tools-install/docker-client.sh"
         },
         {
             "type": "dockerfileSnippet",
