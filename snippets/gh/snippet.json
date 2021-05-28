@@ -1,0 +1,17 @@
+{
+    "actions": [
+        {
+            "type": "mergeJSON",
+            "source": "devcontainer.json",
+            "target": ".devcontainer/devcontainer.json"
+        },
+        {
+            "type": "copyAndRun",
+            "source": "../tools-install/gh.sh"
+        },
+        {
+            "type": "dockerfileSnippet",
+            "content": "# symlink gh config folder\nRUN echo 'if [[ ! -d __DEVCONTAINER_HOME__/.config/gh ]]; then ln -s /config/gh __DEVCONTAINER_HOME__/.config/gh; fi ' >> ~/.bashrc"
+        }
+    ]
+}
