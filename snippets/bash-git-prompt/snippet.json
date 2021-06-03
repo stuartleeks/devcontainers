@@ -1,0 +1,12 @@
+{
+    "actions": [
+        {
+            "type": "copyAndRun",
+            "source": "bash-git-prompt.sh"
+        },
+        {
+            "type": "dockerfileSnippet",
+            "content": "ENV GIT_PROMPT_START='\\033[1;36m__DEVCONTAINER_NAME__>\\033[0m\\033[0;33m\\w\\a\\033[0m'"
+        }
+    ]
+}
