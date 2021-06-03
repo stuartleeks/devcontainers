@@ -1,0 +1,17 @@
+{
+    "actions": [
+        {
+            "type": "mergeJSON",
+            "source": "devcontainer.json",
+            "target": ".devcontainer/devcontainer.json"
+        },
+        {
+            "type": "copyAndRun",
+            "source": "python3.sh"
+        },
+        {
+            "type": "dockerfileSnippet",
+            "content": "# Add python3 aliases\nRUN echo 'alias python=python3\\nalias pip=pip3' >> ~/.bashrc"
+        }
+    ]
+}
