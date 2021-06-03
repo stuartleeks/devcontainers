@@ -11,7 +11,7 @@
         },
         {
             "type": "dockerfileSnippet",
-            "content": "# symlink gh config folder\nRUN echo 'if [[ ! -d __DEVCONTAINER_HOME__/.config/gh ]]; then ln -s /config/gh __DEVCONTAINER_HOME__/.config/gh; fi ' >> ~/.bashrc"
+            "content": "# symlink gh config folder\nRUN echo 'if [[ ! -d __DEVCONTAINER_HOME__/.config/gh ]]; then mkdir -p __DEVCONTAINER_HOME__/.config;ln -s /config/gh __DEVCONTAINER_HOME__/.config/gh; fi ' >> ~/.bashrc"
         }
     ]
 }
