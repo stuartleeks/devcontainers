@@ -1,0 +1,17 @@
+{
+    "actions": [
+        {
+            "type": "mergeJSON",
+            "source": "devcontainer.json",
+            "target": ".devcontainer/devcontainer.json"
+        },
+        {
+            "type": "dockerfileSnippet",
+            "content": "ARG DOCKER_GROUP_ID"
+        },
+        {
+            "type": "copyAndRun",
+            "source": "docker-client.sh"
+        }
+    ]
+}

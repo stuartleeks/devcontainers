@@ -1,9 +1,0 @@
-{
-	"mounts": [
-		// Mount host docker socket
-		"type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock"
-	],
-	"extensions": [
-		"ms-azuretools.vscode-docker",
-	]
-}
