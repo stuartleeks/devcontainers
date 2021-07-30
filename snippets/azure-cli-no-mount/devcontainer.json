@@ -1,0 +1,12 @@
+{
+	"settings": {
+		"terminal.integrated.profiles.linux": {
+			"az interactive": {
+				"path": "az",
+				"args": [
+					"interactive"
+				]
+			},
+		}
+	}
+}
